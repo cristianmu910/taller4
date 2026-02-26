@@ -26,9 +26,9 @@ def mora_por_quintil(df: pd.DataFrame) -> pd.DataFrame:
 def guardar_figura_mora_quintil(mora_quintil: pd.DataFrame, ruta_png):
     plt.figure()
     plt.plot(mora_quintil["quintil_ingreso"].astype(str), mora_quintil["mora_90d"])
-    plt.title("Tasa de mora por quintil de ingreso")
+    plt.title("Tasa de mora por quintil de ingreso (mejorada)")
     plt.xlabel("Quintil de ingreso")
-    plt.ylabel("Mora (%)")
+    plt.ylabel("Tasa de mora (%)")
     plt.tight_layout()
     plt.savefig(ruta_png, dpi=160)
     plt.close()
